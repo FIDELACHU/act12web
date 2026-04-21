@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 12 - Chuck Norris Vue</title>
+  <!-- Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app" class="contenedor">
+        <h2>Lista de chistes con componente</h2>
+        <div class="grid">
+            <chuck-card v-for="(joke, index) in chuck"
+                :key="index" 
+                :value="joke.value">
+            </chuck-card>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
